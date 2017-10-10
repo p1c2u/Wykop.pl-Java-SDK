@@ -144,14 +144,26 @@ public class Link {
 		return id;
 	}
 	
+	public void setId(Integer id) {
+		this.id = id
+	}
+
 	public String getTitle() {
 		return title;
+	}
+	
+	public void setTitle(Integer title) {
+		this.title = title
 	}
 	
 	public String getDescription() {
 		return description;
 	}
 	
+	public void setDescription(Integer description) {
+		this.description = description
+	}
+
 	public List<String> getTags() {
 		return tags;
 	}
