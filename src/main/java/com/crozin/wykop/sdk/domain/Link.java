@@ -22,10 +22,10 @@ public class Link {
 	}
 	
 	public static class ClientStatus {
-		private final Integer vote;
-		private final Boolean favorite;
-		private final Boolean observed;
-		private final List<Integer> associatedLists;
+		protected final Integer vote;
+		protected final Boolean favorite;
+		protected final Boolean observed;
+		protected final List<Integer> associatedLists;
 		
 		ClientStatus(String vote, Boolean favorite, Boolean observed, Integer[] associatedLists) {
 			if (vote.equals("dig")) {
@@ -58,87 +58,87 @@ public class Link {
 		}
 	}
 	
-	private Integer id;
+	protected Integer id;
 	
-	private String title;
-	private String description;
+	protected String title;
+	protected String description;
 	
 	@JsonDeserialize(using = TagsDeserializer.class)
-	private List<String> tags;
+	protected List<String> tags;
 	
 	@JsonProperty
-	private String category;
+	protected String category;
 
 	@JsonProperty("category_name")
-	private String categorySlug;
+	protected String categorySlug;
 	
 	@JsonIgnore
-	private Author _author;
+	protected Author _author;
 	
 	@JsonIgnore
-	private ClientStatus clientStatus;
+	protected ClientStatus clientStatus;
 	
-	private URL url;
+	protected URL url;
 	
 	@JsonProperty("source_url")
-	private URL sourceUrl;
+	protected URL sourceUrl;
 	
 	@JsonDeserialize(using = DateDeserializer.class)
-	private Date date;
+	protected Date date;
 	
-	private Integer group;
+	protected Integer group;
 	
 	@JsonProperty("preview")
-	private URL thumbnail;
+	protected URL thumbnail;
 	
-	private String type;
+	protected String type;
 	
-	private String status;
+	protected String status;
 	
 	@JsonProperty("is_hot")
-	private Boolean hot;
+	protected Boolean hot;
 	
 	@JsonProperty("vote_count")
-	private Integer votesCount;
+	protected Integer votesCount;
 	
 	@JsonProperty("comment_count")
-	private Integer commentsCount;
+	protected Integer commentsCount;
 	
 	@JsonProperty("report_count")
-	private Integer reportsCount;
+	protected Integer reportsCount;
 	
 	@JsonProperty("related_count")
-	private Integer relatedLinksCount;
+	protected Integer relatedLinksCount;
 	
 	@JsonProperty("plus18")
-	private Boolean adultOnly;
+	protected Boolean adultOnly;
 	
 	@JsonProperty("can_vote")
-	private Boolean votable;
+	protected Boolean votable;
 	
 	@JsonProperty("has_own_content")
-	private Boolean hasOwnContent;
+	protected Boolean hasOwnContent;
 	
 	@JsonProperty("own_content")
-	private String ownContent;
+	protected String ownContent;
 	
 	@JsonProperty
-	private String user_vote;
+	protected String user_vote;
 	
 	@JsonProperty
-	private Boolean user_favorite, user_observe;
+	protected Boolean user_favorite, user_observe;
 	
 	@JsonProperty
-	private Integer[] user_lists;
+	protected Integer[] user_lists;
 	
 	@JsonProperty
-	private String author, author_sex;
+	protected String author, author_sex;
 	
 	@JsonProperty
-	private Integer author_group;
+	protected Integer author_group;
 	
 	@JsonProperty
-	private URL author_avatar, author_avatar_med, author_avatar_lo, author_avatar_big;
+	protected URL author_avatar, author_avatar_med, author_avatar_lo, author_avatar_big;
 	
 	public Integer getId() {
 		return id;
